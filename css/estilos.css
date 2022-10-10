@@ -121,8 +121,9 @@ nav {
 /* MENU MOBILE */
 .mobile-menu {
     position: absolute;
-    top: 71px;
+    top: 72px;
     padding: 24px;
+    background-color: var(--white);
 }
 .mobile-menu ul {
     list-style: none;
@@ -153,6 +154,91 @@ nav {
     color: var(--hospital-green);
 }
 
+/* CARRITO DE COMPRAS */
+.product-detail {
+    position: absolute;
+    right: 0;
+    width: 320px;
+    padding: 0 15px;
+    background-color: var(--white);
+}
+.title-container {
+    display: flex;
+    margin: 10px;
+}
+.title-container img {
+    margin: 0 20px;
+    transform: rotate(180deg);
+}
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.my-orden-content {
+    display: flex;
+    flex-direction: column;
+}
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 10px 24px;
+}
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+.order p:nth-child(2) {
+    font-size: var(--md);
+    text-align: end;
+    font-weight: bold;
+}
+.shopping-cart {
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+.shopping-cart figure img{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.shopping-cart p:nth-child(2){
+    font-size: var(--md);
+    color: var(--dark);
+}
+.shopping-cart p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+.primary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    margin-top: 14px;
+    margin-bottom: 30px;            
+    font-size: var(--md);
+    font-weight: bold;
+    color: var(--white);            
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
 @media (max-width: 790px) {
     .menu {
         display: block;
@@ -165,6 +251,11 @@ nav {
     }
     .desktop-menu {
         display: none;
+    }
+}
+@media(max-width: 400px) {
+    .product-detail {
+        width: 100%;
     }
 }
 @media (min-width: 790px) {
