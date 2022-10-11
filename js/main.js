@@ -4,7 +4,7 @@ const menuHamIcon = document.querySelector(".menu")
 const mobileMenu = document.querySelector(".mobile-menu")
 const carritoIcon = document.querySelector(".navbar-shopping-cart")
 const aside = document.querySelector(".product-detail")
-
+const cardsContainer = document.querySelector(".cards-container")
 
 menuEmail.addEventListener("click", toggleMenus)
 menuHamIcon.addEventListener("click", toggleMenus)
@@ -20,3 +20,71 @@ function toggleAsideCarrito() {
     desktopMenu.classList.add("inactive")
     aside.classList.toggle("inactive")
 }
+
+const productostLista = []
+productostLista.push({
+    nombre: "Bike",
+    precio: 120,
+    imagen: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+})
+productostLista.push({
+    nombre: "Pantalla",
+    precio: 500,
+    imagen: "https://img.freepik.com/foto-gratis/maqueta-televisor-montado-pared-sala-estar-pared-blanca-representacion-3d_41470-3279.jpg?w=1060&t=st=1665445622~exp=1665446222~hmac=d14df0f25506188488a04d04f14bd55cb74a42a1274096842bb48b32d2cf9ed0",
+})
+productostLista.push({
+    nombre: "Bocho",
+    precio: 20000,
+    imagen: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+})
+productostLista.push({
+    nombre: "Cafetera",
+    precio: 200,
+    imagen: "https://images.pexels.com/photos/2147683/pexels-photo-2147683.jpeg?auto=compress&cs=tinysrgb&w=600"
+})
+productostLista.push({
+    nombre: "Iphone 12",
+    precio: 3000,
+    imagen: "https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=600"
+})
+productostLista.push({
+    nombre: "Colchon",
+    precio: 2000,
+    imagen: "https://images.pexels.com/photos/6523294/pexels-photo-6523294.jpeg?auto=compress&cs=tinysrgb&w=600"
+})
+productostLista.push({
+    nombre: "Escalera de mano",
+    precio: 250,
+    imagen: "https://images.pexels.com/photos/4947007/pexels-photo-4947007.jpeg?auto=compress&cs=tinysrgb&w=600"
+})
+
+function mostrarProductos(array) {
+    for(producto of array) {            
+        const productCard = document.createElement("div")
+        productCard.classList.add("product-card")
+    
+        const productImg = document.createElement("img")
+        productImg.setAttribute("src", producto.imagen)
+    
+        const productInfo = document.createElement("div")
+        productInfo.classList.add("product-info")
+        const productInfoDiv = document.createElement("div")
+    
+        const productPrecio = document.createElement("p")
+        productPrecio.innerText = `$${producto.precio}`
+        const productNombre = document.createElement("p")
+        productNombre.innerText = producto.nombre
+    
+        const productInfoFigure = document.createElement("figure")
+        const productImgCart = document.createElement("img")
+        productImgCart.setAttribute("src", "./assets/icons/bt_add_to_cart.svg")
+    
+        cardsContainer.appendChild(productCard)
+        productCard.append(productImg, productInfo)
+        productInfo.append(productInfoDiv, productInfoFigure)  
+        productInfoDiv.append(productPrecio, productNombre)
+        productInfoFigure.appendChild(productImgCart)            
+    }
+}
+
+mostrarProductos(productostLista)
