@@ -1,24 +1,38 @@
 const menuEmail = document.querySelector(".navbar-email")
 const desktopMenu = document.querySelector(".desktop-menu")
 const menuHamIcon = document.querySelector(".menu")
+const productDetailCloseIcon = document.querySelector(".product-detail-close")
 const mobileMenu = document.querySelector(".mobile-menu")
 const carritoIcon = document.querySelector(".navbar-shopping-cart")
-const aside = document.querySelector(".product-detail")
+const shoppingCartContainer = document.querySelector("#shoppingCartContainer")
+const productDetailContainer = document.querySelector("#productDetail")
 const cardsContainer = document.querySelector(".cards-container")
 
 menuEmail.addEventListener("click", toggleMenus)
 menuHamIcon.addEventListener("click", toggleMenus)
 carritoIcon.addEventListener("click", toggleAsideCarrito)
+productDetailCloseIcon.addEventListener("click", closeProductDetail)
 
 function toggleMenus() {
-    aside.classList.add("inactive")
     desktopMenu.classList.toggle("inactive")
     mobileMenu.classList.toggle("inactive")
+    shoppingCartContainer.classList.add("inactive")
+    productDetailContainer.classList.add("inactive")
 }
 function toggleAsideCarrito() {
+    shoppingCartContainer.classList.toggle("inactive")
+    productDetailContainer.classList.add("inactive")    
+    mobileMenu.classList.add("inactive")
+    desktopMenu.classList.add("inactive")    
+}
+function openProductDetail() {
+    productDetailContainer.classList.remove("inactive")
+    shoppingCartContainer.classList.add("inactive")
     mobileMenu.classList.add("inactive")
     desktopMenu.classList.add("inactive")
-    aside.classList.toggle("inactive")
+}
+function closeProductDetail() {
+    productDetailContainer.classList.add("inactive")
 }
 
 const productostLista = []
@@ -65,6 +79,7 @@ function mostrarProductos(array) {
     
         const productImg = document.createElement("img")
         productImg.setAttribute("src", producto.imagen)
+        productImg.addEventListener("click", openProductDetail)
     
         const productInfo = document.createElement("div")
         productInfo.classList.add("product-info")
