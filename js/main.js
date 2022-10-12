@@ -37,39 +37,39 @@ function closeProductDetail() {
 
 const productostLista = []
 productostLista.push({
-    nombre: "Bike",
+    nombre: "Bicicleta",
     precio: 120,
-    imagen: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665589099/YardSale/Productos/Bicicleta_ya0dek.webp",
 })
 productostLista.push({
     nombre: "Pantalla",
     precio: 500,
-    imagen: "https://img.freepik.com/foto-gratis/maqueta-televisor-montado-pared-sala-estar-pared-blanca-representacion-3d_41470-3279.jpg?w=1060&t=st=1665445622~exp=1665446222~hmac=d14df0f25506188488a04d04f14bd55cb74a42a1274096842bb48b32d2cf9ed0",
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665588806/YardSale/Productos/Televisor_ozfyk8.webp",
 })
 productostLista.push({
     nombre: "Bocho",
     precio: 20000,
-    imagen: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665588800/YardSale/Productos/Bocho_ts77yk.webp"
 })
 productostLista.push({
     nombre: "Cafetera",
     precio: 200,
-    imagen: "https://images.pexels.com/photos/2147683/pexels-photo-2147683.jpeg?auto=compress&cs=tinysrgb&w=600"
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665588990/YardSale/Productos/Cafetera_tv0tia.webp"
 })
 productostLista.push({
     nombre: "Iphone 12",
     precio: 3000,
-    imagen: "https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg?auto=compress&cs=tinysrgb&w=600"
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665588797/YardSale/Productos/Iphone_cowamu.jpg"
 })
 productostLista.push({
-    nombre: "Colchon",
-    precio: 2000,
-    imagen: "https://images.pexels.com/photos/6523294/pexels-photo-6523294.jpeg?auto=compress&cs=tinysrgb&w=600"
+    nombre: "Cama",
+    precio: 2500,
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665589178/YardSale/Productos/Cama_nq0j4r.webp"
 })
 productostLista.push({
     nombre: "Escalera de mano",
     precio: 250,
-    imagen: "https://images.pexels.com/photos/4947007/pexels-photo-4947007.jpeg?auto=compress&cs=tinysrgb&w=600"
+    imagen: "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665588770/YardSale/Productos/Escalera_lwkitk.webp"
 })
 
 function mostrarProductos(array) {
@@ -92,7 +92,7 @@ function mostrarProductos(array) {
     
         const productInfoFigure = document.createElement("figure")
         const productImgCart = document.createElement("img")
-        productImgCart.setAttribute("src", "./assets/icons/bt_add_to_cart.svg")
+        productImgCart.setAttribute("src", "https://res.cloudinary.com/dwog1xmvw/image/upload/v1665587186/YardSale/Iconos%20-%20Logos/bt_add_to_cart_upspdi.svg")
     
         cardsContainer.appendChild(productCard)
         productCard.append(productImg, productInfo)
